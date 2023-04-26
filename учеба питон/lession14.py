@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-class Transport:
-    def __init__(self, name, max_speed, mileage):
-        self.name = name
-        self.max_speed = max_speed
-        self.mileage = mileage
 
-class Autobus(Transport):
-    pass
+def printList(a: list) -> None:
+    if a:
+        print(a[0])
+        printList(a[1:]) 
+    else: print("End of the list")
 
-autobus = Autobus("Renaul Logan", 180, 12)
+a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
-print("Название автомобиля:", autobus.name, "Скорость:", autobus.max_speed, "Пробег:", autobus.mileage)
+printList(a)

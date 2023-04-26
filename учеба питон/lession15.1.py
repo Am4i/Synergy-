@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
+
 class Transport:
-    def __init__(self, name, max_speed, mileage):
+    def __init__(self, name, maxSpeed, mileage):
         self.name = name
-        self.max_speed = max_speed
+        self.maxSpeed = maxSpeed
         self.mileage = mileage
 
-class Autobus(Transport):
-    pass
+    def __str__(self) -> str:
+        return "Название автомобиля: %s Скорость: %s Пробег: %s" % (self.name, self.maxSpeed, self.mileage)
 
-autobus = Autobus("Renaul Logan", 180, 12)
-
-print("Название автомобиля:", autobus.name, "Скорость:", autobus.max_speed, "Пробег:", autobus.mileage)
+autobus = Transport("Renaul Logan", 180, 12)
+print(autobus)
