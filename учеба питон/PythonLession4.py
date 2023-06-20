@@ -1,12 +1,14 @@
-# -*- coding: utf-8 -*-
-# Запрашиваем у пользователя длину и ширину прямоугольника
-length = float(input("Enter the length of the rectangle: "))
-width = float(input("Enter the width of the rectangle: "))
+number = int(input("Р’РІРµРґРёС‚Рµ РїСЏС‚РёР·РЅР°С‡РЅРѕРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: "))
 
-# Вычисляем площадь и периметр прямоугольника
-area = length * width
-perimeter = 2 * (length + width)
 
-# Выводим результаты на экран
-print("Rectangle area: ", area)
-print("Rectangle perimeter: ", perimeter)
+units = number % 10
+tens = (number // 10) % 10
+hundreds = (number // 100) % 10
+thousands = (number // 1000) % 10
+ten_thousands = (number // 10000) % 10
+
+
+result = (tens ** units) * hundreds / (ten_thousands - thousands)
+
+
+print(result)
